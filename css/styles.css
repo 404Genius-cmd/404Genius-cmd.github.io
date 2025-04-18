@@ -1,0 +1,134 @@
+/* 基础变量 */
+:root {
+    --primary-color: #2E8B57;
+    --secondary-color: #4682B4;
+    --accent-color: #FFD700;
+    --dark-text: #333333;
+    --light-text: #FFFFFF;
+    --bg-gradient: linear-gradient(135deg, #1B5E20 0%, #2E8B57 100%);
+}
+
+/* 全局样式 */
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    margin: 0;
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* 首屏样式 */
+.hero-section {
+    height: 100vh;
+    background: var(--bg-gradient);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: var(--light-text);
+}
+
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.product-3d {
+    width: 300px;
+    height: 300px;
+    margin: 20px 0;
+}
+
+.slogan {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    animation: float 3s ease-in-out infinite;
+}
+
+.cta-buttons button {
+    padding: 12px 24px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#activate-btn {
+    background: var(--accent-color);
+    color: var(--dark-text);
+}
+
+#diagnose-btn {
+    background: rgba(255,255,255,0.2);
+    color: var(--light-text);
+    backdrop-filter: blur(5px);
+}
+
+/* 对比区样式 */
+.comparison-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #F5F5F5;
+}
+
+.comparison-slider {
+    max-width: 800px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.before, .after {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.before {
+    background: #FFFFFF;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+}
+
+.after {
+    background: var(--primary-color);
+    color: white;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: ew-resize;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .slogan {
+        font-size: 1.8rem;
+    }
+    
+    .product-3d {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* 动画效果 */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
