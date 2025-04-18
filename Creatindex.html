@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>植芯智培 - 智能花盆管家</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* 基础样式将在下面的CSS部分定义 */
+    </style>
+</head>
+<body>
+    <!-- 首屏动画 -->
+    <div class="hero-section">
+        <div class="particles" id="particles-js"></div>
+        <div class="product-3d" id="product-3d"></div>
+        <h1 class="slogan">您的植物管家已上线</h1>
+        <div class="cta-buttons">
+            <button id="activate-btn">点击唤醒花盆</button>
+            <button id="diagnose-btn">AI诊断演示</button>
+        </div>
+    </div>
+
+    <!-- 产品对比区 -->
+    <section class="comparison-section">
+        <h2>传统养护 vs 植芯智培</h2>
+        <div class="comparison-slider">
+            <div class="before">
+                <h3>传统养护</h3>
+                <ul>
+                    <li>❌ 凭经验浇水</li>
+                    <li>❌ 出差植物枯死</li>
+                    <li>❌ 无法远程监控</li>
+                </ul>
+            </div>
+            <div class="after">
+                <h3>植芯智培</h3>
+                <ul>
+                    <li>✅ 精准到±3%</li>
+                    <li>✅ 30天无人值守</li>
+                    <li>✅ 微信实时提醒</li>
+                </ul>
+            </div>
+            <input type="range" min="0" max="100" value="50" class="slider" id="comparison-slider">
+        </div>
+    </section>
+
+    <!-- 资料下载区 -->
+    <section class="download-section">
+        <div class="whitepaper">
+            <h3>《智能园艺趋势报告2025》</h3>
+            <form id="download-form">
+                <input type="text" placeholder="您的姓名" required>
+                <input type="email" placeholder="电子邮箱" required>
+                <button type="submit">获取报告+优惠码</button>
+            </form>
+        </div>
+        <div class="videos">
+            <div class="video-thumbnail" data-video="install">
+                <img src="images/install-thumb.jpg" alt="安装教程">
+                <p>产品安装教程</p>
+            </div>
+            <div class="video-thumbnail" data-video="carbon">
+                <img src="images/carbon-thumb.jpg" alt="碳积分演示">
+                <p>碳积分兑换演示</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 转化按钮区 -->
+    <section class="conversion-section">
+        <div class="conversion-buttons">
+            <button class="primary">免费获取养护方案</button>
+            <button class="secondary">预约线下体验</button>
+            <button class="tertiary">企业采购咨询</button>
+        </div>
+    </section>
+
+    <!-- 社交裂变 -->
+    <section class="social-section">
+        <div class="share-reward">
+            <h3>分享给3位好友，解锁VIP养护课程</h3>
+            <button id="share-btn">生成专属海报</button>
+        </div>
+        <div class="ugc-gallery">
+            <!-- UGC内容将通过JS动态加载 -->
+        </div>
+    </section>
+
+    <!-- 视频模态框 -->
+    <div class="video-modal" id="video-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <video controls id="modal-video">
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- 引入JS库 -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
